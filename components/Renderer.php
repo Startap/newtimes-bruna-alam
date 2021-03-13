@@ -55,15 +55,18 @@ class Renderer
      */
     public function drawFooter()
     {
-        $scriptsTemplate = '';
-        $footerFile = \file_get_contents($this->application->getAppPath('views/layout/footer'));
+        ob_start();
+        require_once($this->application->getAppPath('views/layout/footer'));
+        $footerFileContent = ob_get_contents();
+        
+        $scriptsTemplate = ($_ENV['ENVIRONMENT'] === 'production') 
+            ? file_get_contents($this->application->getAppPath('views/layout/scripts')) 
+            : '';
 
-        if ($_ENV['ENVIRONMENT'] == 'production') {
-            $scriptsTemplate = file_get_contents($this->application->getAppPath('views/layout/scripts'));
-        }
+        $footerFileContent = str_replace('%scripts_template%', $scriptsTemplate, $footerFileContent);        
+        ob_end_clean();
 
-        $footerFile = str_replace('%scripts_template%', $scriptsTemplate, $footerFile);
-        return $footerFile;
+        return $footerFileContent;
     }
 
 }
