@@ -11,6 +11,11 @@
 
     <title>%APP_TITLE%</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza:wght@400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/app.css">
 
