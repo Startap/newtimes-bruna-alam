@@ -68,23 +68,9 @@
         </div>
     </div>
 
-    <!-- First row -->
-        <!-- Left column -->
-            <!-- Image Container -->
-                <!-- Image -->
-        <!-- Right column -->
-            <!-- Paragraph container -->
-    
-    <!-- Second row -->
-        <!-- Left column -->
-            <!-- Image Container -->
-                <!-- Image -->
-        <!-- Right column -->
-            <!-- Paragraph container -->
-
 </section>
 
-<img src="/assets/images/divisor/classes.png" class="img-divisor" alt="" />
+<img src="/assets/images/divisor/classes.png" class="img_divisor" alt="" />
 
 <!-- SECTION :: About instructor -->
 <section id="section__about_instructor">
@@ -108,10 +94,14 @@
 
 <!-- SECTION :: Callout -->
 <section id="section__callout">
-    <!-- Title container -->
-        <!-- Paragraph element -->
-    <!-- Subtitle container -->
-        <!-- Paragraph element -->
-    <!-- Button container -->
-        <!-- Button element -->
+
+    <h3 class="callout-text"><?php echo $this->language['components_callouts']['if_you_read_title'] ?></h3>
+    <p class="callout-text"><?php echo $this->language['components_callouts']['if_you_read_subscribe'] ?></p>
+
+    <button class="call-to-action" type="submit">
+        <?php echo $this->language['components_elements']['form_button'] ?>
+    </button>
+
 </section>
+
+<img src="/assets/images/divisor/footer.png" class="img_divisor" alt="">

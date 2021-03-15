@@ -149,25 +149,9 @@ strong {
 }
 
 #headline__right_form_container form button {
-    background: var(--color-sinopia);
-    color: var(--color-beige);
-    font-family: var(--font-button);
-    border-radius: 8px;
-    margin: 15px auto;
-    box-shadow: 0px 2px 4px rgba(206, 75, 38, 0.4);
-    border: 1px solid var(--color-sinopia);
-    line-height: 2.5em;
-    text-align: center;
-    cursor: pointer;
     width: 100%;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
     font-size: 1em;
-}
-
-#headline__right_form_container form button:hover {
-    background: var(--color-deep-champagne);
-    color: var(--color-sinopia);
+    margin: 15px auto;
 }
 
 /**
@@ -235,9 +219,10 @@ strong {
     line-height: 1.2em;
 }
 
-.img-divisor {
+.img_divisor {
     width: 100%;
     display: block;
+    margin-top: -1px;
 }
 
 #section__about_instructor {
@@ -296,4 +281,50 @@ strong {
     margin-bottom: 10px;
     font-size: 0.9em;
     line-height: 1.1em;
+}
+
+#section__callout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-green-sheen);
+    padding: 50px 0;
+}
+
+#section__callout h3,
+#section__callout p {
+    text-align: center;
+    color: var(--color-independence);
+}
+
+#section__callout h3 {
+    font-size: 1.5em;
+    line-height: 100%;
+    margin-bottom: 5px;
+}
+
+#section__callout .call-to-action {
+    margin: 25px auto 0 auto;
+    padding: 10px 30px;
+    font-size: 1em;
+}
+
+/** Button styles */
+.call-to-action {
+    background: var(--color-sinopia);
+    color: var(--color-beige);
+    font-family: var(--font-button);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(206, 75, 38, 0.4);
+    border: 1px solid var(--color-sinopia);
+    line-height: 2.5em;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.call-to-action:hover {
+    background: var(--color-deep-champagne);
+    color: var(--color-sinopia);
 }
