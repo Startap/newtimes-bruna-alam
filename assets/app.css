@@ -57,9 +57,9 @@ strong {
     display: block;
     position: relative;
     height: 100%;
-    min-width: 45%;
+    min-width: 50%;
     content: '';
-    background: linear-gradient(0deg, rgba(60, 63, 93, 0.65), rgba(60, 63, 93, 0.65)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80') no-repeat center center;
+    background: linear-gradient(0deg, rgba(60, 63, 93, 0.35), rgba(60, 63, 93, 0.65)), url('/assets/images/bruna_photos/headline_background.JPG') no-repeat center -2em;
     background-blend-mode: color, normal;
     background-size: cover;
 }
@@ -137,7 +137,7 @@ strong {
 }
 
 #headline__right_form_container input {
-    text-indent: 10px;
+    text-indent: 6px;
     border-radius: 8px;
     background: #FFFFFF;
     box-shadow: 0px 5px 20px -15px rgba(0, 0, 0, 0.6);
@@ -156,7 +156,7 @@ strong {
     margin: 15px auto;
     box-shadow: 0px 2px 4px rgba(206, 75, 38, 0.4);
     border: 1px solid var(--color-sinopia);
-    line-height: 3em;
+    line-height: 2.5em;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -168,4 +168,74 @@ strong {
 #headline__right_form_container form button:hover {
     background: var(--color-deep-champagne);
     color: var(--color-sinopia);
+}
+
+/**
+* Start our About class section
+*/
+#section__about_class {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#section__about_class .row__about_class {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    background: var(--color-independence);
+}
+
+#section__about_class .row__about_class:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+#section__about_class .row__about_class > div {
+    flex-basis: 50%;
+}
+
+#section__about_class .img_container {
+    background: var(--color-beige);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section__about_class .content_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section__about_class .content_container .wrapper {
+    width: 70%;
+    height: min-content;
+    text-align: left;
+}
+
+#section__about_class .wrapper > h3 {
+    color: var(--color-beige);
+    font-family: var(--font-titles);
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+
+#section__about_class .wrapper > p {
+    font-family: var(--font-text);
+    color: var(--color-beige);
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.img-divisor {
+    width: 100%;
+    display: block;
 }
