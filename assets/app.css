@@ -95,6 +95,7 @@ strong {
     flex-direction: column;
     margin-left: 5px;
     font-size: 0.8em;
+    flex-shrink: 0;
 }
 
 #headline__right_youtube_container div span {
@@ -252,6 +253,28 @@ strong {
 #section__about_instructor .img_container {
     flex-basis: 40%;
     margin-right: 25px;
+    position: relative;
+}
+
+#section__about_instructor .img_container:after,
+#section__about_instructor .img_container:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 90%;
+    height: 100%;
+}
+
+#section__about_instructor .img_container:before {
+    left: 5px;
+    top: -10px;
+    background-color: var(--color-green-sheen);
+}
+
+#section__about_instructor .img_container:after {
+    right: 5px;
+    top: 10px;
+    background-color: var(--color-sinopia);
 }
 
 #section__about_instructor .img_container img {
@@ -261,6 +284,7 @@ strong {
     position: relative;
     z-index: 3;
 }
+
 
 #section__about_instructor .text_container {
     display: flex;
