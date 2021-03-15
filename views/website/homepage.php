@@ -93,7 +93,6 @@
             <img src="/assets/images/bruna_photos/profile_picture.jpg" alt="">
         </div>
 
-
         <div class="text_container">
             <h3><?php echo $this->language['section_about_bruna']['title'] ?></h3>
             <div class="paragraph_container">
@@ -105,15 +104,6 @@
 
         </div>
     </div>
-
-    <!-- About card container -->
-        <!-- Left column -->
-            <!-- Image profile -->
-
-        <!-- Right column -->
-            <!-- About title -->
-            <!-- About paragraphs -->
-                <!-- Paragraph element -->
 </section>
 
 <!-- SECTION :: Callout -->
