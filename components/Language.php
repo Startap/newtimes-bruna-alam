@@ -20,7 +20,7 @@
          ],
         
         'section_about_bruna' => [ 
-            'title' => '', 
+            'title' => 'Quem é a advogada por trás disso tudo?', 
             'paragraph' => [
                 'Meu nome é Bruna Alam, sou advogada com 8 anos de experiência prática no dia a dia da Advocacia Autônoma e como Correspondente.',
                 'Pós-graduanda em Direito Extrajudicial e fundadora do Escritório Alam Advocacia Extrajudicial.',

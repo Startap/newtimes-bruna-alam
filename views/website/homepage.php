@@ -33,7 +33,9 @@
                     <label for="complete_name">Telefone (com DDD)</label>
                     <input type="text" name="phone" id="form_phone">
 
-                    <button class="call-to-action" type="submit">Quero ser um advogado expert</button>
+                    <button class="call-to-action" type="submit">
+                        <?php echo $this->language['components_elements']['form_button'] ?>
+                    </button>
                 </form>
             </div>
 
@@ -43,6 +45,29 @@
 
 <!-- SECTION :: About class -->
 <section id="section__about_class">
+    <div class="row__about_class">
+        <div class="img_container">
+            <img src="/assets/images/about_classes/justice_hammer.svg" alt="O martelo da justiça em amarelo e azul">
+        </div>
+        <div class="content_container">
+            <div class="wrapper">
+                <h3><?php echo $this->language['section_about_course']['item_1']['title'] ?></h3>
+                <p><?php echo $this->language['section_about_course']['item_1']['content'] ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="row__about_class">
+        <div class="img_container">
+            <img src="/assets/images/about_classes/judge_avatar.svg" alt="Um avatar de juiz de conciliação em amarelo e azul">
+        </div>
+        <div class="content_container">
+            <div class="wrapper">
+                <h3><?php echo $this->language['section_about_course']['item_2']['title'] ?></h3>
+                <p><?php echo $this->language['section_about_course']['item_2']['content'] ?></p>
+            </div>
+        </div>
+    </div>
+
     <!-- First row -->
         <!-- Left column -->
             <!-- Image Container -->
@@ -59,8 +84,28 @@
 
 </section>
 
+<img src="/assets/images/divisor/classes.png" class="img-divisor" alt="" />
+
 <!-- SECTION :: About instructor -->
 <section id="section__about_instructor">
+    <div class="about__container">
+        <div class="img_container">
+            <img src="/assets/images/bruna_photos/profile_picture.jpg" alt="">
+        </div>
+
+
+        <div class="text_container">
+            <h3><?php echo $this->language['section_about_bruna']['title'] ?></h3>
+            <div class="paragraph_container">
+                <p><?php echo $this->language['section_about_bruna']['paragraph'][0] ?></p>
+                <p><?php echo $this->language['section_about_bruna']['paragraph'][1] ?></p>
+                <p><?php echo $this->language['section_about_bruna']['paragraph'][2] ?></p>
+                <p><?php echo $this->language['section_about_bruna']['paragraph'][3] ?></p>
+            </div>
+
+        </div>
+    </div>
+
     <!-- About card container -->
         <!-- Left column -->
             <!-- Image profile -->
