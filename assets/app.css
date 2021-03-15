@@ -328,3 +328,16 @@ strong {
     background: var(--color-deep-champagne);
     color: var(--color-sinopia);
 }
+
+footer {
+    padding: 25px 0;
+}
+
+footer span {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 0.8em;
+    color: var(--color-beige);
+}

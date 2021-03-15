@@ -1,5 +1,7 @@
 <footer>
-    Copyright <?php echo date('Y'); ?> | Todos os direitos reservados
+    <span>Copyright <?php echo date('Y'); ?> | Todos os direitos reservados | Jovem Advogando</span>
+    <span class="letter-spaced">https://www.jovemadvogando.com.br</span>
+    <span class="letter-spaced">contato@jovemadvogando.com.br</span>
 </footer>
 
 <?php 
