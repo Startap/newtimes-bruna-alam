@@ -48,7 +48,8 @@ strong {
 #section__headline {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
 
     display: flex;
 }
@@ -56,7 +57,7 @@ strong {
 #section__headline_left_side {
     display: block;
     position: relative;
-    height: 100%;
+    min-height: 100%;
     min-width: 50%;
     content: '';
     background: linear-gradient(0deg, rgba(60, 63, 93, 0.35), rgba(60, 63, 93, 0.65)), url('/assets/images/bruna_photos/headline_background.JPG') no-repeat center -2em;
@@ -268,24 +269,37 @@ strong {
     position: absolute;
     display: block;
     content: '';
-    width: 90%;
+    width: 100%;
     height: 100%;
+    transition: all 0.3s ease;
 }
 
 #section__about_instructor .img_container:before {
-    left: 5px;
-    top: -10px;
     background-color: var(--color-green-sheen);
+
+    top: -10px;
+    left: -10px;
 }
 
-#section__about_instructor .img_container:after {
-    right: 5px;
-    top: 10px;
+#section__about_instructor .img_container:after {    
     background-color: var(--color-sinopia);
+
+    top: 10px;
+    left: 10px;
+}
+
+#section__about_instructor .img_container:hover:after {
+    top: -10px;
+    left: -10px;
+}
+
+#section__about_instructor .img_container:hover:before {
+    top: 10px;
+    left: 10px;
 }
 
 #section__about_instructor .img_container img {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: block;
     position: relative;
@@ -372,4 +386,58 @@ footer span {
     margin: 5px 0;
     font-size: 0.8em;
     color: var(--color-beige);
+}
+
+/** 
+* Starting our mobile adjustments in our application
+*/
+@media screen and (max-width: 1024px) {
+    #section__headline_left_side {
+        background-position-y: 0em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #section__headline_left_side {
+        position: absolute;
+        background: linear-gradient(0deg, rgba(60, 63, 93, 0.35), rgba(60, 63, 93, 0.65)), url('/assets/images/bruna_photos/headline_background.JPG') no-repeat center 0em;
+        width: 100%;
+        opacity: 0.15;
+    }
+
+    #section__headline_right_side {
+        justify-content: flex-start;
+    }
+
+    #headline__right_main_container {
+        padding: 0;
+    }
+
+    #headline__right_youtube_container {
+        margin-bottom: 4em;
+    }
+
+    #section__about_class .row__about_class {
+        flex-direction: column-reverse;
+    }
+
+    #section__about_class .row__about_class .content-container {
+        min-height: 350px;
+    }
+
+    #section__about_instructor .about__container {
+        padding: 50px 40px;
+    }
+
+    #section__about_instructor .about__container {
+        flex-direction: column-reverse;        
+    }
+
+    #section__about_instructor .img_container {
+        margin-top: 20px;
+    }
+    
+    #section__callout {
+        padding: 50px 20px;
+    }
 }
