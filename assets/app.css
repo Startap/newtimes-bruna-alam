@@ -285,7 +285,6 @@ strong {
     z-index: 3;
 }
 
-
 #section__about_instructor .text_container {
     display: flex;
     flex-direction: column;
@@ -305,6 +304,7 @@ strong {
     margin-bottom: 10px;
     font-size: 0.9em;
     line-height: 1.1em;
+    color: var(--color-independence);
 }
 
 #section__callout {
@@ -351,6 +351,7 @@ strong {
 .call-to-action:hover {
     background: var(--color-deep-champagne);
     color: var(--color-sinopia);
+    box-shadow: 0 10px 10px rgba(206, 75, 38, 0.4);
 }
 
 footer {
