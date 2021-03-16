@@ -27,10 +27,10 @@
                     <label for="complete_name">Nome completo</label>
                     <input type="text" name="complete_name" id="complete_name">
 
-                    <label for="complete_name">E-mail para contato</label>
+                    <label for="form_email">E-mail para contato</label>
                     <input type="text" name="email" id="form_email">
 
-                    <label for="complete_name">Telefone (com DDD)</label>
+                    <label for="form_phone">Telefone (com DDD)</label>
                     <input type="text" name="phone" id="form_phone">
 
                     <button class="call-to-action" type="submit">

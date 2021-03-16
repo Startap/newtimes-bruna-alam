@@ -135,6 +135,13 @@ strong {
     z-index: 1;
     top: 2em;
     left: 10px;
+    transition: all 0.3s ease;
+}
+
+#headline__right_form_container label.input-filled {
+    top: -3px;
+    font-size: 0.8em;
+    left: 8px;
 }
 
 #headline__right_form_container input {
