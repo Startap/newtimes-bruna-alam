@@ -13,14 +13,18 @@ onInputFormFocus = function (el) {
      }
 }
 
+scrollToForm = function () {
+    let form = document.getElementById('headline__right_main_container')
+    window.scrollTo({ top: form.offsetHeight, left: 0, behavior: 'smooth' })
+}
 
 /** Deal with ready state from document */
 document.onreadystatechange = function() {
     if (document.readyState === 'complete') {
-        inputElements = document.querySelectorAll('form input')
+        let inputElements = document.querySelectorAll('form input')
+        inputElements.forEach(elInput => { elInput.addEventListener('input', (el) => { onInputFormFocus(el) }) })
 
-        inputElements.forEach(elInput => {
-            elInput.addEventListener('input', (el) => { onInputFormFocus(el) })
-        })
+        let btnBackToForm = document.querySelector('#scrollToForm')
+        btnBackToForm.addEventListener('click', () => { scrollToForm() })
     }
 }

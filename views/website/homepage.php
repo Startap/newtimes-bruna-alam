@@ -98,7 +98,7 @@
     <h3 class="callout-text"><?php echo $this->language['components_callouts']['if_you_read_title'] ?></h3>
     <p class="callout-text"><?php echo $this->language['components_callouts']['if_you_read_subscribe'] ?></p>
 
-    <button class="call-to-action" type="submit">
+    <button class="call-to-action" id="scrollToForm">
         <?php echo $this->language['components_elements']['form_button'] ?>
     </button>
 
