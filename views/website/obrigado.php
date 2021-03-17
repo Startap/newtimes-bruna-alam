@@ -6,29 +6,44 @@
     </div>
 
     <div id="section__social_network">
-        <div class="social_network_card">
-            <?php echo $this->language['thank_you']['like_us_instagram'] ?>
-        </div>
+        <a href="<?php echo $this->language['social_networks']['instagram'] ?>" 
+            class="social_network_card"
+            target="_blank"
+            rel="nofollow norel">
+            <div>
+                <img src="/assets/images/social_icons/instagram.svg" alt="Ícone de rede social - Instagram" />
+                <?php echo $this->language['thank_you']['like_us_instagram'] ?>
+            </div>
+        </a>
+
+        <a href="<?php echo $this->language['social_networks']['facebook'] ?>" 
+            class="social_network_card"
+            target="_blank"
+            rel="nofollow norel">
+            <div>
+                <img src="/assets/images/social_icons/facebook-f.svg" alt="Ícone de rede social - Facebook" />
+                <?php echo $this->language['thank_you']['like_us_facebook'] ?>
+            </div>
+        </a>
+
+        <a href="<?php echo $this->language['social_networks']['telegram'] ?>" 
+            class="social_network_card"
+            target="_blank"
+            rel="nofollow norel">
+            <div>
+                <img src="/assets/images/social_icons/telegram-plane.svg" alt="Ícone de rede social - Telegram" />
+                <?php echo $this->language['thank_you']['enter_telegram'] ?>
+            </div>
+        </a>
         
-        <div class="social_network_card">
-            <?php echo $this->language['thank_you']['like_us_facebook'] ?>
-        </div>
-        
-        <div class="social_network_card">
-            <?php echo $this->language['thank_you']['enter_telegram'] ?>
-        </div>
-        
-        <div class="social_network_card">          
-            <?php echo $this->language['thank_you']['enter_whatsapp'] ?>
-        </div>
+        <a href="<?php echo $this->language['social_networks']['whatsapp'] ?>" 
+            class="social_network_card"
+            target="_blank"
+            rel="nofollow norel">
+            <div>
+                <img src="/assets/images/social_icons/whatsapp.svg" alt="Ícone de rede social - WhatsApp" />
+                <?php echo $this->language['thank_you']['enter_whatsapp'] ?>
+            </div>
+        </a>
     </div>
-
 </div>
-
-<!-- Textos de convite para rede social -->
-
-<!-- Links de redes sociais -->
-<?php echo $this->language['social_networks']['instagram'] ?>
-<?php echo $this->language['social_networks']['facebook'] ?>
-<?php echo $this->language['social_networks']['whatsapp'] ?>
-<?php echo $this->language['social_networks']['telegram'] ?>
