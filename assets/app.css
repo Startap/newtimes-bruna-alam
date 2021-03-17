@@ -388,6 +388,24 @@ footer span {
     color: var(--color-beige);
 }
 
+/** Start thank you personalization */
+#section__thankyou {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#section__header_thankyou {
+    width: 100%;
+    background: var(--color-green-sheen);
+    background-image: url('images/icons/ok.svg') no-repeat;
+    background-size: 200%;
+    background-position: -1em -1em;
+}
+
+
 /** 
 * Starting our mobile adjustments in our application
 */

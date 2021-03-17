@@ -41,4 +41,20 @@
             'copyright_website' => 'https://www.jovemadvogando.com.br',
             'copyright_email' => 'contato@jovemadvogando.com.br',
         ],
+
+        'thank_you' => [
+            'header' => 'Está quase tudo certo com sua inscrição',
+            'subtitle' => 'Nós te enviamos um e-mail. A gente só precisa que você confirme sua inscrição usando o botão dentro dele.',
+            'like_us_instagram' => 'Acompanhe nosso conteúdo no Instagram',
+            'like_us_facebook' => 'Siga nossa página no Facebook',
+            'enter_telegram' => 'Faça parte do nosso canal do Telegram',
+            'enter_whatsapp' => 'Participe do grupo de WhatsApp',
+        ],
+
+        'social_networks' => [
+            'instagram' => 'https://www.instagram.com/advbrunaalam/',
+            'facebook' => 'https://www.facebook.com/advbrunaalam/',
+            'whatsapp' => 'https://chat.whatsapp.com/EcfEXcrxA5bGUidmCeUw0W',
+            'telegram' => 'https://t.me/jovemadvogando',
+        ],
     ];
