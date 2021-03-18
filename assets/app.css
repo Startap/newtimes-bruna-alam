@@ -447,9 +447,11 @@ footer span {
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
+    justify-content: center;
 }
 
 #section__social_network a {
+    margin: 10px;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -490,6 +492,7 @@ footer span {
         position: absolute;
         background: linear-gradient(0deg, rgba(60, 63, 93, 0.35), rgba(60, 63, 93, 0.65)), url('/assets/images/bruna_photos/headline_background.JPG') no-repeat center 0em;
         width: 100%;
+        background-size: cover;
         opacity: 0.15;
     }
 
@@ -506,11 +509,11 @@ footer span {
     }
 
     #section__about_class .row__about_class {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
     }
 
-    #section__about_class .row__about_class .content-container {
-        min-height: 350px;
+    #section__about_class .row__about_class > div {
+        min-height: 350px !important;
     }
 
     #section__about_instructor .about__container {
