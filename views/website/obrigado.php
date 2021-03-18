@@ -6,6 +6,7 @@
     </div>
 
     <div id="section__social_network">
+        <?php /*
         <a href="<?php echo $this->language['social_networks']['instagram'] ?>" 
             class="social_network_card"
             target="_blank"
@@ -25,6 +26,7 @@
                 <?php echo $this->language['thank_you']['like_us_facebook'] ?>
             </div>
         </a>
+        */ ?>
 
         <a href="<?php echo $this->language['social_networks']['telegram'] ?>" 
             class="social_network_card"
