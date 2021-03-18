@@ -1,8 +1,8 @@
 /** Functions declarations that we need */
 onInputFormFocus = function (el) {
     // Get input label linked with current input
-    inputLabel = el.originalTarget.labels[0]
-    inputValue = el.originalTarget.value.trim()
+    inputLabel = el.target.labels[0]
+    inputValue = el.target.value.trim()
 
     // If we have some value on our input, the label must be
     // moved to top, otherwise it will be placed over input again
@@ -347,7 +347,7 @@ setupFormActiveCampaign = function() {
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {       
 
-        let inputElements = document.querySelectorAll('form input')
+        let inputElements = document.querySelectorAll('form input:not([type="hidden"])')
         inputElements?.forEach(elInput => { elInput.addEventListener('input', (el) => { onInputFormFocus(el) }) })
 
         let btnBackToForm = document.querySelector('#scrollToForm')
