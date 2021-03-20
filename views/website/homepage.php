@@ -37,7 +37,7 @@
                     <input type="text" name="fullname" id="complete_name" required>
 
                     <label for="form_email">E-mail para contato</label>
-                    <input type="email" name="email" id="form_email" required>
+                    <input type="text" name="email" id="form_email" required>
 
                     <label for="form_phone">Telefone (com DDD)</label>
                     <input type="tel" name="phone" id="form_phone" required>
