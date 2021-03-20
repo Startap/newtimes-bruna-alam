@@ -517,7 +517,26 @@ footer span {
     }
 
     #headline__right_youtube_container {
-        margin-bottom: 4em;
+        width: 100%;
+        justify-content: center;
+        background: var(--color-beige);
+        border-radius: 8px;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        box-shadow: 0px 14px 20px -18px var(--color-deep-champagne);
+    }
+
+    #headline__right_youtube_container > img {
+        background: var(--color-sinopia);
+        padding: 2px 8px;
+        border-radius: 9px 0px 9px 9px;
+        margin-right: 9px;
+    }
+
+    #headline__right_youtube_container div span {
+        color: var(--color-sinopia);
+        font-weight: bold;
     }
 
     #section__about_class .row__about_class {
