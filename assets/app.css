@@ -505,6 +505,7 @@ footer span {
         width: 100%;
         background-size: cover;
         opacity: 0.15;
+        z-index: -2;
     }
 
     #section__headline_right_side {
