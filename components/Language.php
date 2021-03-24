@@ -1,11 +1,10 @@
 <?php
     return [
         'section_headline' => [
-            'headline_principal' => 'Torne-se um <span class="text-champagne">ADVOGADO EXPERT</span> em prospecção de clientes',
-            'headline_secundaria' => 'Aprenda como sair do zero aos primeiros clientes na advocacia em menos de 30 dias',
-            'headline_form_title' => 'INSCREVA-SE',
-            'headline_youtube_1' => 'Aulas ao vivo no YouTube',
-            'headline_youtube_2' => 'Todas as segundas, às 20h',
+            'headline_principal' => 'Do zero ao primeiro cliente na Advocacia',
+            'headline_secundaria' => 'Saia do zero aos primeiros clientes na advocacia em menos de 30 dias.',
+            'headline_form_title' => '05/04, às 20:00h - 100% gratuito',
+            'headline_youtube_1' => 'Webinar ao vivo',
         ],
 
         'section_about_course' => [ 

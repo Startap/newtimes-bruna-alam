@@ -5,48 +5,48 @@
 
     <!-- Right side, our form and headline -->
     <div id="section__headline_right_side">
-        <!-- YouTube row -->
-        <div id="headline__right_youtube_container">
-            <img src="/assets/images/icons/youtube.svg" />
-            <div>
-                <span><?php echo $this->language['section_headline']['headline_youtube_1'] ?></span>
-                <span><?php echo $this->language['section_headline']['headline_youtube_2'] ?></span>
-            </div>
-        </div>
-
         <div id="headline__right_main_container">
-            <!-- Headline row -->        
+
+            <!-- YouTube row -->
+            <div id="headline__right_youtube_container">
+                <?php echo file_get_contents(__DIR__ . '/../../assets/images/icons/youtube.svg'); ?>
+                <div>
+                    <span><?php echo $this->language['section_headline']['headline_youtube_1'] ?></span>
+                </div>
+            </div>
+
+            <!-- Headline row -->
             <h1><?php echo $this->language['section_headline']['headline_principal'] ?></h1>
             <!-- Subtitle row -->
             <h2><?php echo $this->language['section_headline']['headline_secundaria'] ?></h1>
-            <!-- Form container -->
-            <div id="headline__right_form_container">
-                <h3><?php echo $this->language['section_headline']['headline_form_title'] ?></h3>
-    
-                <form method="post" action="https://brunalam.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form" novalidate>
-                    <input type="hidden" name="u" value="1" />
-                    <input type="hidden" name="f" value="1" />
-                    <input type="hidden" name="s" />
-                    <input type="hidden" name="c" value="0" />
-                    <input type="hidden" name="m" value="0" />
-                    <input type="hidden" name="act" value="sub" />
-                    <input type="hidden" name="v" value="2" />
+                <!-- Form container -->
+                <div id="headline__right_form_container">
+                    <h3><?php echo $this->language['section_headline']['headline_form_title'] ?></h3>
+
+                    <form method="post" action="https://brunalam.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form" novalidate>
+                        <input type="hidden" name="u" value="1" />
+                        <input type="hidden" name="f" value="1" />
+                        <input type="hidden" name="s" />
+                        <input type="hidden" name="c" value="0" />
+                        <input type="hidden" name="m" value="0" />
+                        <input type="hidden" name="act" value="sub" />
+                        <input type="hidden" name="v" value="2" />
 
 
-                    <label for="complete_name">Nome completo</label>
-                    <input type="text" name="fullname" id="complete_name" required>
+                        <label for="complete_name">Nome completo</label>
+                        <input type="text" name="fullname" id="complete_name" required>
 
-                    <label for="form_email">E-mail para contato</label>
-                    <input type="text" name="email" id="form_email" required>
+                        <label for="form_email">E-mail para contato</label>
+                        <input type="text" name="email" id="form_email" required>
 
-                    <label for="form_phone">Telefone (com DDD)</label>
-                    <input type="tel" name="phone" id="form_phone" required>
+                        <label for="form_phone">Telefone (com DDD)</label>
+                        <input type="tel" name="phone" id="form_phone" required>
 
-                    <button class="call-to-action" id="_form_1_submit" type="submit">
-                        <?php echo $this->language['components_elements']['form_button'] ?>
-                    </button>
-                </form>
-            </div>
+                        <button class="call-to-action" id="_form_1_submit" type="submit">
+                            <?php echo $this->language['components_elements']['form_button'] ?>
+                        </button>
+                    </form>
+                </div>
 
         </div>
     </div>
