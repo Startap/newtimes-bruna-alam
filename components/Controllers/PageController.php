@@ -13,4 +13,9 @@ class PageController extends ApplicationController
     {
         $this->renderViewport(['website/obrigado']);
     }
+
+    public function getSalePage() 
+    {
+        $this->renderViewport(['website/venda_curso']);
+    }
 }
