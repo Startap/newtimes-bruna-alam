@@ -29,9 +29,9 @@
             ],
             'paragraph_sales_page' => [
                 'Uma advogada empreendedora inconformada com a Advocacia tradicional, com mais de 8 anos de experiência prática no mundo jurídico.',
-                'Quando decidi abrir meu escritório de Advocacia consegui, em 30 dias, fechar 6 contratos usando apenas meus métodos (e que vou ensinar nesta mentoria).',
+                'Quando decidi abrir meu escritório de Advocacia consegui <strong>fechar 6 contratos em 30 dias</strong>, usando apenas meus métodos (e que vou ensinar nesta mentoria).',
                 'De Advogada Correspondente a Juíza Leiga, minha experiência no campo de batalha fala por si só.',
-                'Hoje minha missão é ensinar tudo aquilo que a Faculdade de Direito não ensina a quem quer advogar!',
+                '<b>Hoje minha missão é ensinar tudo aquilo que a Faculdade de Direito não ensina a quem quer advogar!<b>',
             ]
         ],
         
