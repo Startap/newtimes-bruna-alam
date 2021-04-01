@@ -7,7 +7,17 @@
 $language = $this->language['sales_page'];
 ?>
 
-<h1><?php echo $language['callout_message']; ?></h1>
+<section id="callout-container">
+
+<article>
+    <h1><?php echo $language['callout_message']; ?></h1>
+    <p><?php echo $language['callout_subtitle']; ?></p>
+
+    <button class="call-to-action">QUERO ME INSCREVER</button>
+</article>
+
+</section>
+
 
 <!-- Targets -->
 <?php
