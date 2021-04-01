@@ -65,6 +65,7 @@
 
         'sales_page' => [
             'callout_message' => 'Aprenda como sair do Zero aos primeiros clientes na Advocacia em menos de 30 dias e faturar até R$7.000,00',
+            'callout_subtitle' => 'Mentoria Jovem Advogando',
             'targets' => [
                 'Estudantes de Direito',
                 'Jovens advogados',
