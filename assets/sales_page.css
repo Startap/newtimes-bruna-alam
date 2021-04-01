@@ -1,6 +1,8 @@
 /* General style */
+
 @import 'variables.css';
 
+/* Callout section declarations */
 section#callout-container {
     display: flex;
     min-height: 100vh;
@@ -10,10 +12,76 @@ section#callout-container {
     padding: 0 30px;
 }
 
+section#callout-container article {
+    display: flex;
+    flex-direction: column;
+}
+
+section#callout-container article :not(:last-child) {
+    margin-bottom: 20px;
+}
+
 section#callout-container article h1 {
-    font-size: 1.5em;
-    line-height: 150%;
+    font-size: 2em;
+    line-height: 100%;
     color: var(--color-beige);
+}
+
+section#callout-container article p {
+    font-size: 1em;
+    color: var(--color-beige);
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: relative;
+}
+
+section#callout-container article p::before {
+    content: '';
+    position: absolute;
+    
+    background: linear-gradient(90deg, var(--color-sinopia) 0%, var(--color-deep-champagne) 20%);
+    
+
+    left: 0;
+    top: -6px;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+}
+
+section#callout-container article button {
+    line-height: 3em;
+    font-size: 1.2em;
+}
+
+
+/* Here we'll begin targets section */
+section#targets-wrapper {
+    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section#targets-wrapper article {
+    width: 100%;
+}
+
+section#targets-wrapper article .target-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 20px;
+    background: var(--color-deep-champagne);
+    color: var(--color-beige);
+    margin: -1px 0;
+}
+
+section#targets-wrapper article .targets-container {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Mobile screens */

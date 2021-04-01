@@ -6,7 +6,6 @@
 /** Variables section declaration */
 
 @import 'variables.css';
-
 body {
     background: var(--color-independence);
     font-family: var(--font-text);
@@ -362,14 +361,18 @@ strong, b {
     background: var(--color-sinopia);
     color: var(--color-beige);
     font-family: var(--font-button);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(206, 75, 38, 0.4);
-    border: 1px solid var(--color-sinopia);
     line-height: 2.5em;
     text-align: center;
-    cursor: pointer;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(206, 75, 38, 0.4);
     box-sizing: border-box;
-    transition: all 0.2s ease;
+    border: 1px solid var(--color-sinopia);
+    
+    cursor: pointer;
+    overflow-x: hidden;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .call-to-action:hover {
@@ -377,6 +380,23 @@ strong, b {
     color: var(--color-sinopia);
     box-shadow: 0 10px 10px rgba(206, 75, 38, 0.4);
 }
+
+.call-to-action:hover::after {
+    left: 100%;
+}
+
+.call-to-action:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, .6), transparent);
+    transform: matrix(1, 0, -0.700208, 1, 0, 0);
+    transition: all 0.5s ease;
+}
+
 
 footer {
     padding: 25px 0;

@@ -64,8 +64,8 @@
         ],
 
         'sales_page' => [
-            'callout_message' => 'Aprenda como sair do Zero aos primeiros clientes na Advocacia em menos de 30 dias e faturar até R$7.000,00',
-            'callout_subtitle' => 'Mentoria Jovem Advogando',
+            'callout_message' => 'Aprenda como sair do <span class="text-champagne">Zero aos primeiros clientes na Advocacia em menos de 30 dias</span> e faturar até R$7.000,00',
+            'callout_subtitle' => 'Mentoria Jovem Advogando, com Bruna Alam',
             'targets' => [
                 'Estudantes de Direito',
                 'Jovens advogados',

@@ -20,16 +20,25 @@ $language = $this->language['sales_page'];
 
 
 <!-- Targets -->
-<?php
-$targets = $language['targets'];
-$htmlDiv = <<<HTMLDiv
-        <p>%target_item</p>
-    HTMLDiv;
+<section id="targets-wrapper">
+    <article>
+        <h1>Para quem é esta mentoria?</h1>
 
-foreach ($targets as $itemTarget) {
-    echo str_replace('%target_item', $itemTarget, $htmlDiv);
-}
-?>
+        <div class="targets-container">
+            <?php
+            $targets = $language['targets'];
+            $htmlDiv = <<<HTMLDiv
+                    <span class="target-item">%target_item</span>
+                HTMLDiv;
+
+            foreach ($targets as $itemTarget) {
+                echo str_replace('%target_item', $itemTarget, $htmlDiv);
+            }
+            ?>
+        </div>
+    </article>
+</section>
+
 
 <!-- Modules -->
 <?php
