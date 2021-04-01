@@ -1,0 +1,25 @@
+/* General style */
+@import 'variables.css';
+
+section#callout-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+section#callout-container article h1 {
+    font-size: 1.5em;
+    line-height: 150%;
+    color: var(--color-beige);
+}
+
+/* Mobile screens */
+
+@media screen and (max-width: 768px) {}
+
+/* Desktop screens */
+
+@media screen and (min-width: 769px) {}

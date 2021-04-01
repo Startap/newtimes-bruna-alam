@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/sales_page.css">
 
 
     <!-- Favicon declarations -->
