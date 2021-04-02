@@ -9,12 +9,12 @@ $language = $this->language['sales_page'];
 
 <section id="callout-container">
 
-<article>
-    <h1><?php echo $language['callout_message']; ?></h1>
-    <p><?php echo $language['callout_subtitle']; ?></p>
+    <article>
+        <h1><?php echo $language['callout_message']; ?></h1>
+        <p><?php echo $language['callout_subtitle']; ?></p>
 
-    <button class="call-to-action">QUERO ME INSCREVER</button>
-</article>
+        <button class="call-to-action">QUERO ME INSCREVER</button>
+    </article>
 
 </section>
 
@@ -22,17 +22,18 @@ $language = $this->language['sales_page'];
 <!-- Targets -->
 <section id="targets-wrapper">
     <article>
-        <h1>Para quem é esta mentoria?</h1>
+        <h1 class="section-title">Para quem é esta mentoria?</h1>
 
         <div class="targets-container">
             <?php
             $targets = $language['targets'];
             $htmlDiv = <<<HTMLDiv
-                    <span class="target-item">%target_item</span>
+                    <span class="target-item %bg-target">%target_item</span>
                 HTMLDiv;
 
-            foreach ($targets as $itemTarget) {
-                echo str_replace('%target_item', $itemTarget, $htmlDiv);
+            foreach ($targets as $key => $itemTarget) {
+                $divToRender = str_replace('%bg-target', "bg-target-$key", $htmlDiv);
+                echo str_replace('%target_item', $itemTarget, $divToRender);
             }
             ?>
         </div>
@@ -41,22 +42,32 @@ $language = $this->language['sales_page'];
 
 
 <!-- Modules -->
-<?php
-$modules = $language['modules'];
-$htmlDiv = <<<HTMLDiv
-        <div>%title <br> %date <br> %description</div>
+<section id="modules-wrapper">
+    <h1 class="section-title">Qual o conteúdo?</h1>
+
+    <?php
+    $modules = $language['modules'];
+    $htmlDiv = <<<HTMLDiv
+        <article>
+            <h2 class="module-title">%title <br><small>%date</small></h2>
+            <p>%description</p>
+        </article>
     HTMLDiv;
 
-foreach ($modules as $itemModule) {
-    $divToRender = str_replace('%title', $itemModule['title'], $htmlDiv);
-    $divToRender = str_replace('%date', $itemModule['date'], $divToRender);
-    $divToRender = str_replace('%description', $itemModule['description'], $divToRender);
+    foreach ($modules as $itemModule) {
+        $divToRender = str_replace('%title', $itemModule['title'], $htmlDiv);
+        $divToRender = str_replace('%date', $itemModule['date'], $divToRender);
+        $divToRender = str_replace('%description', $itemModule['description'], $divToRender);
 
-    echo $divToRender;
-}
-?>
+        echo $divToRender;
+    }
+    ?>
+</section>
+
+
 
 <!-- Bonus -->
+<h1 class="section-title">Bônus oferecidos</h1>
 <?php
 $bonuses = $language['bonus'];
 $htmlDiv = <<<HTMLDiv
