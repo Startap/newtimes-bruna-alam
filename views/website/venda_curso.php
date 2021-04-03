@@ -43,69 +43,95 @@ $language = $this->language['sales_page'];
 
 <!-- Modules -->
 <section id="modules-wrapper">
-    <h1 class="section-title">Qual o conteúdo?</h1>
+    <h1 class="section-title">Qual o conteúdo da mentoria?</h1>
 
-    <?php
-    $modules = $language['modules'];
-    $htmlDiv = <<<HTMLDiv
-        <article>
-            <h2 class="module-title">%title <br><small>%date</small></h2>
-            <p>%description</p>
-        </article>
-    HTMLDiv;
+    <div id="modules-items-container">
+        <?php
+        $modules = $language['modules'];
+        $htmlDiv = <<<HTMLDiv
+            <article>
+                <h2 class="module-title">%title <small>%date</small></h2>
+                <p>%description</p>
+            </article>
+        HTMLDiv;
 
-    foreach ($modules as $itemModule) {
-        $divToRender = str_replace('%title', $itemModule['title'], $htmlDiv);
-        $divToRender = str_replace('%date', $itemModule['date'], $divToRender);
-        $divToRender = str_replace('%description', $itemModule['description'], $divToRender);
+        foreach ($modules as $itemModule) {
+            $divToRender = str_replace('%title', $itemModule['title'], $htmlDiv);
+            $divToRender = str_replace('%date', $itemModule['date'], $divToRender);
+            $divToRender = str_replace('%description', $itemModule['description'], $divToRender);
 
-        echo $divToRender;
-    }
-    ?>
+            echo $divToRender;
+        }
+        ?>
+    </div>
 </section>
 
 
 
 <!-- Bonus -->
-<h1 class="section-title">Bônus oferecidos</h1>
-<?php
-$bonuses = $language['bonus'];
-$htmlDiv = <<<HTMLDiv
-        <div>%title <br> %price <br> 
-            <ul>%description</ul>
-        </div>
-    HTMLDiv;
+<section id="bonus-wrapper">
+    <h1 class="section-title">E os bônus oferecidos?</h1>
 
-foreach ($bonuses['bonus_content'] as $content) {
-    $divToRender = str_replace('%title', $content['title'], $htmlDiv);
-    $divToRender = str_replace('%price', $content['price'], $divToRender);
-    $htmlDescription = '';
-    foreach ($content['description'] as $key => $descriptionItem) {
-        $htmlDescription = $htmlDescription . "<li>$descriptionItem</li>";
-    }
+    <div id="bonus-items-container">
+        <?php
+        $bonuses = $language['bonus'];
+        $htmlDiv = <<<HTMLDiv
+            <article class="bonus-item %bonus-item-number">
+                <div>
+                    <h2>%title</h2> 
+                    <span class="bonus-price-tag">%price</span>
+                </div>                
+                <ul>%description</ul>
+            </article>
+        HTMLDiv;
 
-    $divToRender = str_replace('%description', $htmlDescription, $divToRender);
-    echo $divToRender;
-}
-?>
+        foreach ($bonuses['bonus_content'] as $key => $content) {
+            $divToRender = str_replace('%title', $content['title'], $htmlDiv);
+            $divToRender = str_replace('%price', $content['price'], $divToRender);
+            $divToRender = str_replace('%bonus-item-number', "bonus-item-$key", $divToRender);
+            $htmlDescription = '';
+            foreach ($content['description'] as $key => $descriptionItem) {
+                $htmlDescription = $htmlDescription . "<li>$descriptionItem</li>";
+            }
+
+            $divToRender = str_replace('%description', $htmlDescription, $divToRender);
+            echo $divToRender;
+        }
+        ?>
+    </div>
+
+</section>
+
+<div id="divisor-about" style="background: url('https://api.iconify.design/entypo:briefcase.svg?color=%23FFF') no-repeat center center / contain;"></div>
 
 <!-- Investiment -->
-<?php
-$investiment = $language['investiment'];
-$htmlDiv = <<<HTMLDiv
-        <div>%title <br> %subtitle <br> %price_original <br> %price_discount</div>
-    HTMLDiv;
+<div id="investiment-badge-section">
+    <?php
+    $investiment = $language['investiment'];
+    $htmlDiv = <<<HTMLDiv
+            <article id="investiment-badge">
+                <h1 class="section-title">%title</h1>                
+                <h2>%subtitle</h2>
+                <span id="price_original">%price_original</span>
+                <span id="price_discount">%price_discount</span>
+            </article>
+        HTMLDiv;
 
-echo $investiment['title'];
-echo $investiment['subtitle'];
-echo $investiment['price_original'];
-echo $investiment['price_discount'];
-?>
+    $divToRender = str_replace('%title', $investiment['title'], $htmlDiv);
+    $divToRender = str_replace('%subtitle', $investiment['subtitle'], $divToRender);
+    $divToRender = str_replace('%price_original', $investiment['price_original'], $divToRender);
+    $divToRender = str_replace('%price_discount', $investiment['price_discount'], $divToRender);
+
+    echo $divToRender;
+    ?>
+</div>
+
+<div id="divisor-about"></div>
 
 <!-- About Bruna -->
 <!-- SECTION :: About instructor -->
 <section id="section__about_instructor">
-    <div class="about__container">
+    <div class="about__container about__without-border-radius">
         <div class="img_container">
             <img src="/assets/images/bruna_photos/profile_picture.jpg" alt="">
         </div>

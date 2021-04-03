@@ -3,6 +3,10 @@
 @import 'variables.css';
 /* Callout section declarations */
 
+body {
+    overflow-x: hidden;
+}
+
 section#callout-container {
     display: flex;
     min-height: 100vh;
@@ -66,7 +70,10 @@ section#targets-wrapper article {
 }
 
 .section-title {
-    font-size: 1.6em;
+    color: var(--color-beige);
+    font-size: 3em;
+    font-variant: all-small-caps;
+    text-align: center;
     box-sizing: border-box;
     padding: 0.5em 0.5em;
     margin-bottom: 0.5em;
@@ -78,25 +85,10 @@ section#targets-wrapper article .target-item {
     padding: 2em 20px;
     color: var(--color-independence);
     margin: -1px 0;
+    background: #d3e2db url(https://api.iconify.design/whh:law.svg?color=%237fb39aa1&rotate=90deg) no-repeat -0.3em 0.2em / contain;
 }
 
-section#targets-wrapper article .bg-target-0 {
-    background: rgba(233, 164, 53, 1);
-}
-
-section#targets-wrapper article .bg-target-1 {
-    background: rgba(238, 187, 104, 1);
-}
-
-section#targets-wrapper article .bg-target-2 {
-    background: rgba(243, 205, 145, 1);
-}
-
-section#targets-wrapper article .bg-target-3 {
-    background: rgba(247, 224, 186, 1);
-}
-
-section#targets-wrapper article .targets-container {
+.targets-container {
     display: flex;
     flex-direction: column;
 }
@@ -105,6 +97,7 @@ section#targets-wrapper article .targets-container {
 
 section#modules-wrapper {
     padding: 1em 0.5em;
+    box-sizing: border-box;
 }
 
 section#modules-wrapper article {
@@ -160,17 +153,474 @@ section#modules-wrapper article p {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: url('/assets/images/icons/calendar.svg');
-    background-size: contain;
+    background: url('/assets/images/icons/calendar.svg') no-repeat center center / contain;
     height: 1rem;
-    width: 1rem;
+    width: 1.2rem;
     vertical-align: baseline;
+}
+
+/* Bonus section */
+
+#bonus-wrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#bonus-wrapper .section-title {
+    margin-bottom: 25px;
+}
+
+#bonus-items-container .bonus-item {
+    box-sizing: border-box;
+    color: var(--color-independence);
+    padding: 3em 1.5em;
+    margin: 0;
+}
+
+#bonus-items-container .bonus-item-0 {
+    grid-area: bonus1;
+    background-color: hsl(37deg 80% 70%);
+}
+
+#bonus-items-container .bonus-item-1 {
+    grid-area: bonus2;
+    background-color: hsl(37deg 80% 80%);
+}
+
+#bonus-items-container .bonus-item-2 {
+    grid-area: bonus3;
+    background-color: hsl(37deg 80% 90%);
+    box-shadow: 0px 20px 20px -20px #222;
+}
+
+#bonus-items-container .bonus-item h2 {
+    font-weight: bold;
+    line-height: 120%;
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+.bonus-item>div {
+    padding: 0;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.bonus-item>div:after {
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 7px;
+    border-radius: 0 50px 50px 0;
+    display: block;
+    bottom: 0;
+    right: 0;
+    background: var(--color-independence);
+}
+
+.bonus-price-tag {
+    position: relative;
+    display: flex;
+    width: 60%;
+    top: 5px;
+    left: 1.5em;
+    color: var(--color-independence);
+    font-size: 1em;
+    font-family: var(--font-button);
+}
+
+.bonus-price-tag::before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: -1.5em;
+    bottom: 0;
+    width: 1em;
+    height: 1em;
+    background: url('https://api.iconify.design/entypo:price-tag.svg?color=%23CE4B26') no-repeat center center / contain;
+}
+
+.bonus-item ul {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.bonus-item ul li {
+    position: relative;
+    left: 1.5em;
+    color: black;
+}
+
+.bonus-item ul li::before {
+    position: absolute;
+    left: -1.5em;
+    bottom: 0;
+    background: url('https://api.iconify.design/entypo:add-to-list.svg?color=%233C3F5D') no-repeat top center / contain;
+    content: '';
+    width: 1em;
+    height: 100%;
+}
+
+.bonus-item ul li {
+    color: black;
+}
+
+.bonus-item ul li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+/* Start divisor animated after bonus */
+
+.wave-wrapper {
+    content: "";
+    position: relative;
+    display: block;
+    height: 8em;
+    width: 100%;
+    margin-top: -5px;
+    z-index: -1;
+    transform: rotateX(180deg);
+}
+
+.wave-wrapper .wave {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 300%;
+    background-position: center;
+    animation: wave;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#wave-2 {
+    background-image: url('/assets/images/divisor/waves-blue-light.svg');
+    background-position-x: -25%;
+    animation-duration: 13s;
+}
+
+#wave-3 {
+    background-image: url('/assets/images/divisor/waves-blue-lighten.svg');
+    animation-duration: 20s;
+}
+
+/* Investiment section */
+
+#investiment-badge-section {
+    padding: 50px 40px;
+    background: var(--color-beige);
+    margin-top: 2em;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#investiment-badge-section:after {
+    z-index: 0;
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    content: '';
+    left: 1em;
+    bottom: 1em;
+    background: transparent url('/assets/images/icons/money.svg') no-repeat bottom left / contain;
+    opacity: 0.2;
+}
+
+#investiment-badge {
+    position: relative;
+    z-index: 1;
+}
+
+#investiment-badge .section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-sinopia);
+    line-height: 85%;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#investiment-badge h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--color-beige);
+    background: var(--color-independence);
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 150%;
+    font-family: var(--font-titles);
+}
+
+#investiment-badge>span {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#investiment-badge #price_original {
+    font-size: 1.2em;
+    color: var(--color-sinopia);
+    text-decoration: line-through;
+}
+
+#investiment-badge #price_discount {
+    color: #597b6b;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+}
+
+#investiment-badge #price_discount small {
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+#divisor-about {
+    height: 4em;
+    width: 100%;
+    background: url('https://api.iconify.design/octicon:law-16.svg?color=%23FFF') no-repeat center center / contain;
+    position: relative;
+    margin-top: 50px;
+    opacity: 0.4;
+}
+
+#section-faq {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto 0 auto;
+}
+
+#faq-items-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-card:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+.faq-card {
+    background: var(--color-beige);
+    border-radius: 10px;
+    padding: 1.5em 35px;
+}
+
+.faq-card .faq-question {
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    color: var(--color-sinopia);
+}
+
+.faq-card .faq-answer {
+    font-size: 0.9rem;
+    color: var(--color-independence);
+    box-sizing: border-box;
+}
+
+.faq-question span {
+    position: relative;
+    padding-left: 2em;
+    line-height: 2em;
+}
+
+.faq-question span::before {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: url('https://api.iconify.design/ls:sort.svg?color=%23CE4B26') no-repeat center center / contain;
+    transform: scale(1.1) rotate(0deg);
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.faq-card:hover .faq-question span::before {
+    transform: scale(1.3) rotate(225deg) translateY(-10%);
+}
+
+.faq-answer {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.faq-answer span {
+    position: relative;
+    display: block;
+    padding: 1em 0 1em 20px;
+    box-sizing: border-box;
+}
+
+.faq-answer span::before {
+    content: '';
+    display: block;
+    left: 7px;
+    top: 5px;
+    background: var(--color-sinopia);
+    width: 4px;
+    height: 90%;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#disclaimer-badge {
+    max-width: 700px;
+    margin: 0 auto 0 auto;
+}
+
+#disclaimer-badge p {
+    box-sizing: border-box;
+    padding: 3em 2em;
+    background: linear-gradient( 290deg, #d6d698, #e8e354);
+    color: var(--color-independence);
+    border: 1px solid var(--color-green-sheen);
+    box-shadow: 0 0px 30px -15px #222;
+     text-align: center;
 }
 
 /* Mobile screens */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    section#targets-wrapper article .target-item {
+        background-position: right 0.2em;
+    }
+    section#targets-wrapper article .target-item.bg-target-0 {
+        background-color: hsl(152, 21%, 86%);
+    }
+    section#targets-wrapper article .target-item.bg-target-1 {
+        background-color: hsl(152, 21%, 76%);
+    }
+    section#targets-wrapper article .target-item.bg-target-2 {
+        background-color: hsl(152, 21%, 66%);
+    }
+    section#section__about_instructor .about__container {
+        border-radius: 0;
+    }
+    .faq-question span {
+        line-height: 1em;
+    }
+}
 
 /* Desktop screens */
 
-@media screen and (min-width: 769px) {}
+@media screen and (min-width: 769px) {
+    #disclaimer-badge p {
+        border-radius: 15px;
+    }
+    .bonus-item>div:after {
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 20px;
+        display: block;
+        top: -25px;
+        left: 0;
+        background: var(--color-independence);
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 6px -2px #222;
+    }
+    section#section__about_instructor {
+        box-sizing: border-box;
+    }
+    section#section__about_instructor .img-container {
+        max-width: 300px;
+        margin: auto;
+    }
+    #modules-items-container {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 45% 45%;
+        justify-content: space-evenly;
+    }
+    .targets-container {
+        display: grid;
+        grid-auto-flow: row;
+        justify-content: space-evenly;
+    }
+    section#targets-wrapper article .target-item {
+        width: max-content;
+        padding: 2em 2em 2em 5em;
+        font-weight: bold;
+        color: var(--color-independence);
+        border-radius: 25px;
+        font-size: 1.3em;
+    }
+    #investiment-badge {
+        display: grid;
+        grid-template-areas: "title title title title" ". badge oldprice ." ". badge newprice .";
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: unset;
+    }
+    #investiment-badge .section-title {
+        margin-bottom: 2em;
+    }
+    #investiment-badge h1 {
+        grid-area: title;
+        text-align: center;
+    }
+    #investiment-badge h2 {
+        grid-area: badge;
+    }
+    #investiment-badge #price_original {
+        grid-area: oldprice;
+        align-self: end;
+    }
+    #investiment-badge #price_discount {
+        grid-area: newprice;
+    }
+    #bonus-wrapper #bonus-items-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas: "bonus1 bonus2" "bonus3 bonus3";
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #bonus-wrapper, #modules-items-container, .targets-container, #investiment-badge-section {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #bonus-wrapper, .targets-container, #investiment-badge-section {
+        max-width: 1200px;
+    }
+    #modules-items-container {
+        max-width: 1290px;
+        grid-template-columns: repeat(2, 45%);
+    }
+    #investiment-badge-section {
+        box-shadow: 0 20px 20px -20px #222;
+    }
+    .targets-container {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+    }
+}
+
+@keyframes wave {
+    0% {
+        background-position-x: 10%;
+    }
+    50% {
+        background-position-x: 60%;
+    }
+    100% {
+        background-position-x: 10%;
+    }
+}

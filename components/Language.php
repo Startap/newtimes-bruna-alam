@@ -112,10 +112,10 @@
                 ]
             ],
             'investiment' => [
-                'title' => 'Qual o investimento desta mentoria?',
+                'title' => 'quanto preciso investir agora?',
                 'subtitle' => 'Um investimento com valor promocional de R$ 497,00 nas primeiras 24 horas!',
-                'price_original' => 'R$ 3.390,00',
-                'price_discount' => 'R$ 997,00 (ou 12x de 97,14)',
+                'price_original' => 'De <span class="accent-price-red">R$ 3.390,00</span>',
+                'price_discount' => 'por <span class="accent-price-green">R$ 997,00</span> <small>(ou 12x de 97,14)</small>',
             ],
             'faq_questions' => [
                 [
