@@ -154,7 +154,10 @@
 
             'disclaimer' => [
                 'title' => 'Informações sobre obtenção de resultados',
-                'text' => 'Este produto não garante a obtenção de resultados.<br><br>Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como garantia de resultados.',
+                'text' => [
+                    'Este produto não garante a obtenção de resultados.',
+                    'Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como garantia de resultados.',
+                ]
             ],
         ],
 

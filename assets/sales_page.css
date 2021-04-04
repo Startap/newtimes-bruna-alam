@@ -79,13 +79,19 @@ section#targets-wrapper article {
     margin-bottom: 0.5em;
 }
 
-section#targets-wrapper article .target-item {
+#targets-wrapper .target-item {
     width: 100%;
     box-sizing: border-box;
     padding: 2em 20px;
-    color: var(--color-independence);
+    color: #021b0f;
+    font-weight: bold;
     margin: -1px 0;
-    background: #d3e2db url(https://api.iconify.design/whh:law.svg?color=%237fb39aa1&rotate=90deg) no-repeat -0.3em 0.2em / contain;
+    transition: all 0.4s ease;
+    background: #d3e2db url(https://api.iconify.design/whh:law.svg?color=%23021b0f40&rotate=90deg) no-repeat -0.3em 0.2em / contain;
+}
+
+#targets-wrapper .target-item:hover {
+    background-image: url(https://api.iconify.design/whh:law.svg?color=%23021b0f90&rotate=90deg);
 }
 
 .targets-container {
@@ -401,7 +407,7 @@ section#modules-wrapper article p {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 5em auto;
 }
 
 #faq-items-wrapper {
@@ -417,6 +423,8 @@ section#modules-wrapper article p {
     background: var(--color-beige);
     border-radius: 10px;
     padding: 1.5em 35px;
+    cursor: pointer;
+    box-shadow: 0 5px 21px -7px #222;
 }
 
 .faq-card .faq-question {
@@ -435,35 +443,47 @@ section#modules-wrapper article p {
     position: relative;
     padding-left: 2em;
     line-height: 2em;
+    display: block;
 }
 
 .faq-question span::before {
     content: '';
     position: absolute;
     width: 1em;
-    height: 1em;
+    height: 100%;
     background: url('https://api.iconify.design/ls:sort.svg?color=%23CE4B26') no-repeat center center / contain;
-    transform: scale(1.1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
     left: 0;
     top: 0;
     transition: all 0.5s ease-in-out;
 }
 
 .faq-card:hover .faq-question span::before {
-    transform: scale(1.3) rotate(225deg) translateY(-10%);
+    transform: scale(1) rotate(225deg);
+}
+
+.faq-opened:hover .faq-question span::before {
+    transform: scale(1) rotate(-45deg);
+}
+
+.faq-opened .faq-question span::before {
+    transition: all 0.5s ease-in-out;
+    background: url('https://api.iconify.design/ls:small.svg?color=%23CE4B26') no-repeat center center / contain;
+    transform: scale(1) rotate(-45deg);
 }
 
 .faq-answer {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .faq-answer span {
+    line-height: 125%;
     position: relative;
-    display: block;
     padding: 1em 0 1em 20px;
     box-sizing: border-box;
+    display: block;
 }
 
 .faq-answer span::before {
@@ -481,16 +501,44 @@ section#modules-wrapper article p {
 #disclaimer-badge {
     max-width: 700px;
     margin: 0 auto 0 auto;
+    box-sizing: border-box;
+    padding: 3em 2em;
+    background: linear-gradient(90deg, rgba(206, 75, 38, 1) 0%, rgba(170, 54, 21, 1) 100%);
+    color: var(--color-beige);
+    box-shadow: 0 0px 30px -15px #222;
+    text-align: center;
+    position: relative;
 }
 
 #disclaimer-badge p {
-    box-sizing: border-box;
-    padding: 3em 2em;
-    background: linear-gradient( 290deg, #d6d698, #e8e354);
-    color: var(--color-independence);
-    border: 1px solid var(--color-green-sheen);
-    box-shadow: 0 0px 30px -15px #222;
-     text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+    margin: 0 auto 1em auto;
+}
+
+#disclaimer-badge::after {
+    background: url('https://api.iconify.design/eva:alert-circle-fill.svg?color=rgba(170%2C54%2C21%2C1)') no-repeat left center / contain;
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#disclaimer-badge .first {
+    font-family: var(--font-titles);
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#disclaimer-badge .second {
+    font-family: var(--font-text);
+    font-weight: normal;
 }
 
 /* Mobile screens */
@@ -533,6 +581,11 @@ section#modules-wrapper article p {
         background: var(--color-independence);
         border-radius: 10px;
         box-shadow: inset 2px 2px 6px -2px #222;
+        transition: width 0.3s ease-in-out, left 0.4s ease-out;
+    }
+    .bonus-item:hover>div::after {
+        left: 15%;
+        width: 50%;
     }
     section#section__about_instructor {
         box-sizing: border-box;
@@ -548,12 +601,13 @@ section#modules-wrapper article p {
         justify-content: space-evenly;
     }
     .targets-container {
-        display: grid;
-        grid-auto-flow: row;
+        display: flex;
+        flex-flow: wrap;
         justify-content: space-evenly;
     }
     section#targets-wrapper article .target-item {
         width: max-content;
+        margin: 1em auto;
         padding: 2em 2em 2em 5em;
         font-weight: bold;
         color: var(--color-independence);

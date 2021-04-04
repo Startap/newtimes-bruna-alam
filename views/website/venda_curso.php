@@ -182,6 +182,7 @@ foreach ($language['faq_questions'] as $key => $faqItem) {
     <h1 class="section-title"><?php echo $language['disclaimer']['title'] ?></h1>
 
     <div id="disclaimer-badge">
-        <p><?php echo $language['disclaimer']['text'] ?></p>
+        <p class="first"><?php echo $language['disclaimer']['text'][0] ?></p>
+        <p class="second"><?php echo $language['disclaimer']['text'][1] ?></p>
     </div>
 </section>

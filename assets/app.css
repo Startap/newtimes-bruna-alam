@@ -363,12 +363,10 @@ strong, b {
     font-family: var(--font-button);
     line-height: 2.5em;
     text-align: center;
-
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(206, 75, 38, 0.4);
     box-sizing: border-box;
     border: 1px solid var(--color-sinopia);
-    
     cursor: pointer;
     overflow-x: hidden;
     position: relative;
@@ -397,9 +395,10 @@ strong, b {
     transition: all 0.5s ease;
 }
 
-
 footer {
     padding: 25px 0;
+    margin-top: 2em;
+    border-top: 10px solid var(--color-beige);
 }
 
 footer span {
