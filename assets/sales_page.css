@@ -92,6 +92,10 @@ section#callout-container article button {
     height: 100%;
 }
 
+#iframe-video-container .ytp-impression-link {
+    display: none !important;
+}
+
 /* Here we'll begin targets section */
 
 section#targets-wrapper {
@@ -702,6 +706,7 @@ section#modules-wrapper article p {
     }
     #callout-container article {
         text-align: center;
+        padding-bottom: 5em;
     }
     #callout-container article button {
         max-width: 700px;

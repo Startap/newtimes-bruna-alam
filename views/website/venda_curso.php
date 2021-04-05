@@ -15,7 +15,7 @@ $language = $this->language['sales_page'];
 
         <div class="iframe-container-width">
             <div id="iframe-video-container">
-                <iframe id="iframe-video" src="https://www.youtube.com/embed/RjOgRX37Wp0" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe id="iframe-video" src="https://www.youtube.com/embed/RjOgRX37Wp0?controls=0&modestbranding=1&showinfo=0&rel=0" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -44,6 +44,20 @@ $language = $this->language['sales_page'];
                 echo str_replace('%target_item', $itemTarget, $divToRender);
             }
             ?>
+        </div>
+    </article>
+</section>
+
+<section id="testimonials-wrapper">
+    <article>
+        <h1 class="section-title">Veja o que diz quem já participou</h1>
+        <div class="testimonial-items">
+            <div class="iframe-container-width">
+                <div id="iframe-video-container">
+                    <iframe id="iframe-video" src="https://www.youtube.com/embed/Ff1R67k7LZQ?controls=0&modestbranding=1&showinfo=0&rel=0" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </article>
 </section>
