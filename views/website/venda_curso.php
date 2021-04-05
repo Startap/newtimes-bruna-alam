@@ -11,11 +11,19 @@ $language = $this->language['sales_page'];
 
     <article>
         <h1><?php echo $language['callout_message']; ?></h1>
-        <p><?php echo $language['callout_subtitle']; ?></p>
+        <!-- <p><?php echo $language['callout_subtitle']; ?></p> -->
 
-        <button class="call-to-action">QUERO ME INSCREVER</button>
+        <div class="iframe-container-width">
+            <div id="iframe-video-container">
+                <iframe id="iframe-video" src="https://www.youtube.com/embed/RjOgRX37Wp0" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <a href="https://pay.hotmart.com/H42757980I" target="_blank" rel="norel nofollow">
+            <button class="call-to-action">QUERO ME INSCREVER</button>
+        </a>
     </article>
-
 </section>
 
 
@@ -111,20 +119,25 @@ $language = $this->language['sales_page'];
     $htmlDiv = <<<HTMLDiv
             <article id="investiment-badge">
                 <h1 class="section-title">%title</h1>                
-                <h2>%subtitle</h2>
                 <span id="price_original">%price_original</span>
                 <span id="price_discount">%price_discount</span>
+
             </article>
         HTMLDiv;
+    $priceToRender = 'price_discount_' . $_ENV['COURSE_PRICE'];
 
     $divToRender = str_replace('%title', $investiment['title'], $htmlDiv);
-    $divToRender = str_replace('%subtitle', $investiment['subtitle'], $divToRender);
     $divToRender = str_replace('%price_original', $investiment['price_original'], $divToRender);
-    $divToRender = str_replace('%price_discount', $investiment['price_discount'], $divToRender);
+    $divToRender = str_replace('%price_discount', $investiment[$priceToRender], $divToRender);
+    $divToRender = str_replace('%promocional_price_disclaimer', $investiment['disclaimer'], $divToRender);
 
     echo $divToRender;
     ?>
 </div>
+
+<?php
+echo str_replace('%disclaimer', $investiment['disclaimer'], "<small id='disclaimer_price'>%disclaimer</small>");
+?>
 
 <div id="divisor-about"></div>
 
@@ -137,7 +150,8 @@ $language = $this->language['sales_page'];
         </div>
 
         <div class="text_container">
-            <h3><?php echo $this->language['section_about_bruna']['title'] ?></h3>
+            <h1><?php echo $this->language['section_about_bruna']['bruna_alam'] ?></h1>
+            <h2><?php echo $this->language['section_about_bruna']['title'] ?></h2>
             <div class="paragraph_container">
                 <p><?php echo $this->language['section_about_bruna']['paragraph_sales_page'][0] ?></p>
                 <p><?php echo $this->language['section_about_bruna']['paragraph_sales_page'][1] ?></p>

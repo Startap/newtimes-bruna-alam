@@ -10,25 +10,38 @@ body {
 section#callout-container {
     display: flex;
     min-height: 100vh;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
     padding: 0 30px;
+    position: relative;
+    background: var(--color-independence);
+    background-blend-mode: color;
+    z-index: 0;
 }
 
-section#callout-container article {
-    display: flex;
-    flex-direction: column;
+#callout-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--color-independence) url('/assets/images/bruna_photos/headline_background.JPG') center center / cover;
+    background-blend-mode: overlay;
+    z-index: -1;
+    opacity: 25%;
 }
 
-section#callout-container article :not(:last-child) {
+section#callout-container article :not(:last-child):not(div) {
     margin-bottom: 20px;
 }
 
 section#callout-container article h1 {
-    font-size: 2em;
+    font-size: 3rem;
     line-height: 100%;
     color: var(--color-beige);
+    grid-area: title;
 }
 
 section#callout-container article p {
@@ -37,6 +50,7 @@ section#callout-container article p {
     box-sizing: border-box;
     padding-top: 20px;
     position: relative;
+    grid-area: subtitle;
 }
 
 section#callout-container article p::before {
@@ -55,6 +69,27 @@ section#callout-container article p::before {
 section#callout-container article button {
     line-height: 3em;
     font-size: 1.2em;
+}
+
+.iframe-container-width {
+    max-width: 700px;
+}
+
+#iframe-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    grid-area: video;
+    box-shadow: 0px 10px 25px -15px #010000;
+}
+
+#iframe-video-container iframe, #iframe-video-container object, #iframe-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Here we'll begin targets section */
@@ -345,7 +380,7 @@ section#modules-wrapper article p {
 }
 
 #investiment-badge .section-title {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     color: var(--color-sinopia);
     line-height: 85%;
@@ -544,6 +579,19 @@ section#modules-wrapper article p {
 /* Mobile screens */
 
 @media screen and (max-width: 768px) {
+    #callout-container article {
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    section#callout-container article h1 {
+        font-size: 2.3rem;
+    }
+    #callout-container button {
+        margin: 2em 0;
+    }
     section#targets-wrapper article .target-item {
         background-position: right 0.2em;
     }
@@ -614,10 +662,19 @@ section#modules-wrapper article p {
         border-radius: 25px;
         font-size: 1.3em;
     }
+    #disclaimer_price {
+        text-align: center;
+        margin: 1em auto 0 auto;
+        display: block;
+        font-weight: bold;
+        color: var(--color-beige);
+        width: 80%;
+        font-variant: all-small-caps;
+    }
     #investiment-badge {
         display: grid;
-        grid-template-areas: "title title title title" ". badge oldprice ." ". badge newprice .";
-        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-areas: "title title title" ". oldprice ." ". newprice .";
+        grid-template-columns: 20% 60% 20%;
         grid-template-rows: unset;
     }
     #investiment-badge .section-title {
@@ -643,6 +700,16 @@ section#modules-wrapper article p {
         grid-template-rows: auto auto;
         grid-template-areas: "bonus1 bonus2" "bonus3 bonus3";
     }
+    #callout-container article {
+        text-align: center;
+    }
+    #callout-container article button {
+        max-width: 700px;
+        width: 100%;
+    }
+    .iframe-container-width {
+        margin: 2em auto;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -664,6 +731,12 @@ section#modules-wrapper article p {
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
+    }
+    #callout-container h1 {
+        max-width: 1150px;
+    }
+    .iframe-container-width {
+        max-width: 700px;
     }
 }
 

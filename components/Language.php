@@ -19,6 +19,7 @@
          ],
         
         'section_about_bruna' => [ 
+            'bruna_alam' => 'Bruna Alam - Advogada Expert',
             'title' => 'Quem é a advogada por trás disso tudo?', 
             'paragraph' => [
                 'Meu nome é Bruna Alam, sou advogada com 8 anos de experiência prática no dia a dia da Advocacia Autônoma e como Correspondente.',
@@ -42,7 +43,7 @@
         
         'components_elements' => [ 
             'form_button' => 'Quero ser um advogado expert',
-            'copyright_main_text' => 'Copyright Jovem Advogando | Todos os direitos reservados',
+            'copyright_main_text' => 'Copyright Advogado Expert | Todos os direitos reservados',
             'copyright_website' => 'https://www.jovemadvogando.com.br',
             'copyright_email' => 'contato@jovemadvogando.com.br',
         ],
@@ -65,7 +66,7 @@
 
         'sales_page' => [
             'callout_message' => 'Aprenda como sair do <span class="text-champagne">Zero aos primeiros clientes na Advocacia em menos de 30 dias</span> e faturar até R$7.000,00',
-            'callout_subtitle' => 'Mentoria Jovem Advogando, com Bruna Alam',
+            'callout_subtitle' => 'Mentoria Advogado Expert, com Bruna Alam',
             'targets' => [
                 'Estudantes de Direito',
                 'Jovens advogados',
@@ -113,9 +114,10 @@
             ],
             'investiment' => [
                 'title' => 'quanto preciso investir agora?',
-                'subtitle' => 'Um investimento com valor promocional de R$ 497,00 nas primeiras 24 horas!',
+                'disclaimer' => 'Preço promocional de lançamento por tempo limitado',
                 'price_original' => 'De <span class="accent-price-red">R$ 3.390,00</span>',
-                'price_discount' => 'por <span class="accent-price-green">R$ 997,00</span> <small>(ou 12x de 97,14)</small>',
+                'price_discount_997' => 'por <span class="accent-price-green">R$ 997,00</span> <small>(ou 12x de 97,14)</small>',
+                'price_discount_497' => 'por <span class="accent-price-green">R$ 497,00</span> <small>(ou 12x de 48,42)</small>',
             ],
             'faq_questions' => [
                 [

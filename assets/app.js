@@ -366,17 +366,18 @@ setupFormActiveCampaign = function() {
 /** Deal with ready state from document */
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {       
-
-        let inputElements = document.querySelectorAll('form input:not([type="hidden"])')
-        inputElements?.forEach(elInput => { elInput.addEventListener('input', (el) => { onInputFormFocus(el) }) })
-
         let btnBackToForm = document.querySelector('#scrollToForm')
         btnBackToForm?.addEventListener('click', () => { scrollToForm() })
 
         if (document.querySelector('form')) {
+            let inputElements = document.querySelectorAll('form input:not([type="hidden"])')
+            inputElements?.forEach(elInput => { elInput.addEventListener('input', (el) => { onInputFormFocus(el) }) })
+        
             setupFormActiveCampaign()
         }
 
         setupFaqCardItems()
+
+        setupYouTubePlayer()
     }
 }

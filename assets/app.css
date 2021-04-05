@@ -315,12 +315,19 @@ strong, b {
     flex-basis: 55%;
 }
 
-#section__about_instructor .text_container h3 {
-    font-size: 1.5em;
-    font-weight: bold;
+#section__about_instructor h1, h2 {
     color: var(--color-sinopia);
     line-height: 85%;
+}
+
+#section__about_instructor h2 {
     margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#section__about_instructor .text_container h1 {
+    font-size: 1.8em;
+    font-weight: bold;
 }
 
 #section__about_instructor .paragraph_container>p {
@@ -397,8 +404,7 @@ strong, b {
 
 footer {
     padding: 25px 0;
-    margin-top: 2em;
-    border-top: 10px solid var(--color-beige);
+    margin-top: 5em;
 }
 
 footer span {
