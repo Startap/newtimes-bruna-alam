@@ -3,8 +3,9 @@
         'section_headline' => [
             'headline_principal' => 'Do zero ao primeiro cliente na Advocacia',
             'headline_secundaria' => 'Saia do zero aos primeiros clientes na advocacia em menos de 30 dias.',
-            'headline_form_title' => '05/04, às 20:00h - 100% gratuito',
-            'headline_youtube_1' => 'Webinar ao vivo',
+            'headline_form_title' => '07 de julho',
+            'headline_form_free' => '100% gratuito',
+            'headline_youtube_1' => 'ao vivo',
         ],
 
         'section_about_course' => [ 

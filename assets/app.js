@@ -378,6 +378,6 @@ document.onreadystatechange = function () {
 
         setupFaqCardItems()
 
-        setupYouTubePlayer()
+        // setupYouTubePlayer()
     }
 }

@@ -21,7 +21,13 @@
             <h2><?php echo $this->language['section_headline']['headline_secundaria'] ?></h1>
                 <!-- Form container -->
                 <div id="headline__right_form_container">
-                    <h3><?php echo $this->language['section_headline']['headline_form_title'] ?></h3>
+                    <div class="date_container">
+                        <img src="/assets/images/icons/calendar_color.svg" alt="Ícone de calendário" />
+                        <p>
+                            <span class="text-bold uppercase"><?php echo $this->language['section_headline']['headline_form_title'] ?></span>
+                            <span class="text-bold"><?php echo $this->language['section_headline']['headline_form_free'] ?></span>
+                        </p>
+                    </div>
 
                     <form method="post" action="https://brunalam.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form" novalidate>
                         <input type="hidden" name="u" value="1" />
@@ -101,6 +107,8 @@
     </div>
 </section>
 
+<img src="/assets/images/divisor/footer.png" class="img_divisor rotate-horizontal" alt="">
+
 <!-- SECTION :: Callout -->
 <section id="section__callout">
 
@@ -112,5 +120,3 @@
     </button>
 
 </section>
-
-<img src="/assets/images/divisor/footer.png" class="img_divisor" alt="">
