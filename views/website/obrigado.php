@@ -38,7 +38,7 @@
             </div>
         </a>
         
-        <a href="<?php echo $this->language['social_networks']['whatsapp'] ?>" 
+        <a href="<?php echo isset($_ENV['WHATSAPP_URL']) ? $_ENV['WHATSAPP_URL'] : 'https://whatsapp.com' ?>" 
             class="social_network_card"
             target="_blank"
             rel="nofollow norel">
