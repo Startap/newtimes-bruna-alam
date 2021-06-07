@@ -18,4 +18,9 @@ class PageController extends ApplicationController
     {
         $this->renderViewport(['website/venda_curso']);
     }
+
+    public function getTreinamentoAdvogadoCeo() 
+    {
+        $this->renderViewport(['website/advogada_ceo']);
+    }
 }
